@@ -1,0 +1,100 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detection</title>
+    <style>
+       
+        body {
+            background-image:url("{% static '2.jpeg'%}");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+                background-image: url("{% static '4.jpg' %}");
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+                
+                max-width: 700px;
+                width: 90%;
+                background-color: rgba(255, 255, 255, 0.8); /* Adjust the opacity as needed */
+                border-radius: 8px;
+                padding:100px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    
+        
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color:red;
+            margin-right:100px
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        input[type="file"] {
+            margin-bottom: 30px;
+            font-size: 18px;
+        }
+
+        button {
+            padding: 15px 30px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Object Detection</h1>
+        <form action="{% url 'home' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="file" name="image">
+            <button type="submit"> Upload </button>
+        </form>
+              </div>
+        
+        {% if uploaded_image %}
+        <img src="data:image/png;base64,{{ uploaded_image }}" alt="Uploaded Image">
+        {% endif %}
+    </div>
+</body>
+</html>
