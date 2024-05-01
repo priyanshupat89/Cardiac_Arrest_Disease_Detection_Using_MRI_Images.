@@ -8,10 +8,15 @@ In this project, I'm focusing on the design and development of a system for dete
 Key Components:
 
 Data Collection: Acquiring a comprehensive dataset of MRI images containing both normal and abnormal cases of cardiac conditions. These images will serve as the foundation for training the deep learning model.
+
 Data Preprocessing: Preprocessing the MRI images to enhance quality, normalize intensities, and potentially augment the dataset to improve model generalization.
+
 Model Selection: Utilizing the YOLOv8 model, a state-of-the-art object detection architecture known for its efficiency and accuracy in detecting objects within images.
+
 Training the Model: Training the YOLOv8 model using the preprocessed MRI dataset to learn the distinguishing features indicative of cardiac arrest.
+
 Model Evaluation: Assessing the performance of the trained model through metrics such as accuracy, precision, recall, and F1-score. Fine-tuning the model as necessary to optimize performance.
+
 Deployment: Developing a user-friendly interface where clinicians and medical professionals can upload MRI images for automated cardiac arrest detection. This interface should provide clear and actionable insights based on the model's predictions.
 
 
