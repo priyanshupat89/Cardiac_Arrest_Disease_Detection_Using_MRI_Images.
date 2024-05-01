@@ -1,4 +1,6 @@
-Design & Development of Cardiac Arrest Disease Detection through MRI Images using Deep Learning
+This is my first Deep Learning project
+
+Title: Design & Development of Cardiac Arrest Disease Detection through MRI Images using Deep Learning
 
 Project Description:
 
